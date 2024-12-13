@@ -1,0 +1,40 @@
+{
+  "project": {
+    "id": "5ry5i8",
+    "name": "test-token\"><img src=y onerror=confirm(1)>",
+    "creationTs": 1734108005255,
+    "lastModifiedTs": 1734108079879
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "hf-hub-login_p2gp0g",
+        "source": {
+          "url": "https://cdn.jsdelivr.net/npm/huggingface-visualblocks-nodes@latest"
+        },
+        "nodeSpecId": "hf-hub-login",
+        "customData": {
+          "previewX": 16,
+          "previewY": 16,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": 24.090576171875,
+          "posY": 18.5,
+          "width": 217.81884765625,
+          "height": 130,
+          "selected": true
+        },
+        "propValues": {
+          "apikey": "123456789",
+          "hidePreview": false
+        }
+      }
+    ]
+  },
+  "customNodeUrls": [
+    "https://storage.googleapis.com/tfweb/visualblocks-github-bundles/@visualblocks/gemini@latest/dist/bundle.js",
+    "https://cdn.jsdelivr.net/npm/huggingface-visualblocks-nodes@latest"
+  ]
+}
