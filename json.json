@@ -1,6 +1,6 @@
 {
   "project": {
-    "name": "Gemini Email Generation and Review",
+    "name": "Gemini Email <b onmouseover=alert(1)>Generation</b> and Review",
     "id": "__y0yrfo",
     "creationTs": 1685487890322,
     "lastModifiedTs": 1726531213470,
@@ -9,8 +9,8 @@
       "tags": [
         "text"
       ],
-      "contactURL": "",
-      "tutorialYouTube": ""
+      "contactURL": "javascript:alert(1)",
+      "tutorialYouTube": "javascript:alert(1)"
     }
   },
   "graph": {
