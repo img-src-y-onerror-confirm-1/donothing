@@ -1,0 +1,116 @@
+{
+  "project": {
+    "id": "lirosf",
+    "name": "test-hf",
+    "creationTs": 1734198930951,
+    "lastModifiedTs": 1734616202133,
+    "userSetData": {
+      "description": "",
+      "tags": [],
+      "contactURL": "",
+      "tutorialYouTube": ""
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "hf-hub-login_binabc",
+        "source": {
+          "url": "https://cdn.jsdelivr.net/npm/huggingface-visualblocks-nodes@latest"
+        },
+        "nodeSpecId": "hf-hub-login",
+        "customData": {
+          "previewX": 16,
+          "previewY": 16,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -256,
+          "posY": 16,
+          "width": 217.81884765625,
+          "height": 130,
+          "selected": false
+        },
+        "propValues": {
+          "hidePreview": false
+        }
+      },
+      {
+        "id": "logger-node_ebgw9g",
+        "nodeSpecId": "logger-node",
+        "customData": {
+          "previewX": 416,
+          "previewY": 16,
+          "previewWidth": 400,
+          "previewHeight": 256
+        },
+        "uiData": {
+          "posX": 720,
+          "posY": 48,
+          "width": 176,
+          "height": 69,
+          "selected": false
+        },
+        "inputValues": {
+          "data": []
+        },
+        "incomingEdges": {
+          "data": [
+            {
+              "sourceNodeId": "hf-hub-login_binabc",
+              "outputId": "apikey"
+            },
+            {
+              "sourceNodeId": "hf-server-chat-completion_bsgtur",
+              "outputId": "results"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-server-chat-completion_bsgtur",
+        "source": {
+          "url": "https://cdn.jsdelivr.net/npm/huggingface-visualblocks-nodes@latest"
+        },
+        "nodeSpecId": "hf-server-chat-completion",
+        "customData": {
+          "previewX": 352,
+          "previewY": 16,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": 112,
+          "posY": -64,
+          "width": 368,
+          "height": 318,
+          "selected": false
+        },
+        "inputValues": {
+          "user": "what is the longest day?d",
+          "assistant": "",
+          "system": "",
+          "temperature": 1,
+          "max_tokens": 200,
+          "frequency_penalty": -2,
+          "modelid": "mistralai/Mistral-7B-Instruct-v0.2",
+          "endpointurl": "https://c579-176-228-157-97.ngrok-free.app/api/v1/chat/completions",
+          "stream": false
+        },
+        "incomingEdges": {
+          "apikey": [
+            {
+              "sourceNodeId": "hf-hub-login_binabc",
+              "outputId": "apikey"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "customNodeUrls": [
+    "https://storage.googleapis.com/tfweb/visualblocks-github-bundles/@visualblocks/gemini@latest/dist/bundle.js",
+    "https://cdn.jsdelivr.net/npm/huggingface-visualblocks-nodes@latest"
+  ]
+}
