@@ -3,7 +3,7 @@
     "id": "d3h1au",
     "name": "camera",
     "creationTs": 1735634242349,
-    "lastModifiedTs": 1735663499707,
+    "lastModifiedTs": 1735663538033,
     "userSetData": {
       "description": "descriptions",
       "tags": [],
@@ -39,6 +39,14 @@
           },
           "resize,,,width": 20,
           "resize,,,height": 20
+        },
+        "incomingEdges": {
+          "image": [
+            {
+              "sourceNodeId": "live_camera_487yi4",
+              "outputId": "image"
+            }
+          ]
         }
       },
       {
@@ -183,7 +191,7 @@
           "posY": -256,
           "width": 176,
           "height": 105,
-          "selected": true
+          "selected": false
         },
         "propValues": {
           "hidePreview": true
