@@ -1,0 +1,204 @@
+{
+  "project": {
+    "id": "9fsbwi",
+    "name": "JS-model",
+    "creationTs": 1735727346577,
+    "lastModifiedTs": 1736339430127,
+    "userSetData": {
+      "description": "JS-model",
+      "tags": [],
+      "contactURL": "",
+      "tutorialYouTube": ""
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "logger-node_7cnztt",
+        "nodeSpecId": "logger-node",
+        "customData": {
+          "previewX": 16,
+          "previewY": 16,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -128,
+          "posY": -512,
+          "width": 176,
+          "height": 69,
+          "selected": false
+        },
+        "inputValues": {
+          "data": []
+        },
+        "incomingEdges": {
+          "data": [
+            {
+              "sourceNodeId": "hf-hub-login_ipf4sg",
+              "outputId": "apikey"
+            },
+            {
+              "sourceNodeId": "custom_api_b1b5i4",
+              "outputId": "responseJson"
+            }
+          ]
+        }
+      },
+      {
+        "id": "custom_api_b1b5i4",
+        "nodeSpecId": "custom_api",
+        "customData": {
+          "initialWidth": 304,
+          "initialHeight": 368,
+          "previewX": 480,
+          "previewY": 16,
+          "previewWidth": 304,
+          "previewHeight": 368
+        },
+        "uiData": {
+          "posX": -160,
+          "posY": -304,
+          "width": 368,
+          "height": 255,
+          "selected": false
+        },
+        "propValues": {
+          "type": "post",
+          "immediateMode": false,
+          "hidePreview": false
+        },
+        "inputValues": {
+          "endpointUrl": "https://d4ycp1caube7xk85.us-east4.gcp.endpoints.huggingface.cloud",
+          "payloadJson": "{\"inputs\":\"upper\"}",
+          "apiKey": ""
+        },
+        "incomingEdges": {
+          "payloadJson": [
+            {
+              "sourceNodeId": "input_text_1mx779",
+              "outputId": "text"
+            }
+          ]
+        }
+      },
+      {
+        "id": "input_text_1mx779",
+        "nodeSpecId": "input_text",
+        "customData": {
+          "initialWidth": 304,
+          "initialHeight": 144,
+          "previewX": 48,
+          "previewY": 304,
+          "previewWidth": 304,
+          "previewHeight": 144
+        },
+        "uiData": {
+          "posX": -528,
+          "posY": -240,
+          "width": 176,
+          "height": 130,
+          "selected": false
+        },
+        "propValues": {
+          "text": "{\"inputs\":\"e\"}",
+          "passwordMode": false,
+          "hidePreview": false
+        }
+      },
+      {
+        "id": "input_image_y8pgpk",
+        "nodeSpecId": "input_image",
+        "customData": {
+          "initialWidth": 448,
+          "initialHeight": 240,
+          "previewX": 1280,
+          "previewY": 80,
+          "previewWidth": 448,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -1200,
+          "posY": -304,
+          "width": 176,
+          "height": 180,
+          "selected": false
+        },
+        "propValues": {
+          "urls": [
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic1.jpg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic2.jpeg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic3.jpg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic4.jpeg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic5.jpg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic6.jpg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic7.jpeg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic8.jpg",
+            "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic9.jpg"
+          ],
+          "gridColumnCount": 3,
+          "allowUserUpload": false,
+          "selectedImageUrl": "https://storage.googleapis.com/tfweb/visualblocks-input-images/pic1.jpg",
+          "hidePreview": false
+        }
+      },
+      {
+        "id": "image-grid_5xgyir",
+        "source": {
+          "url": "https://storage.googleapis.com/custom_node_example/image_grid.js"
+        },
+        "nodeSpecId": "image-grid",
+        "customData": {
+          "previewX": 1808,
+          "previewY": 80,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -896,
+          "posY": -384,
+          "width": 176,
+          "height": 130,
+          "selected": false
+        },
+        "propValues": {
+          "gridSizeX": 3,
+          "gridSizeY": 3
+        },
+        "incomingEdges": {
+          "original": [
+            {
+              "sourceNodeId": "input_image_y8pgpk",
+              "outputId": "image"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-hub-login_ipf4sg",
+        "source": {
+          "url": "https://cdn.jsdelivr.net/npm/huggingface-visualblocks-nodes@latest"
+        },
+        "nodeSpecId": "hf-hub-login",
+        "customData": {
+          "previewX": 832,
+          "previewY": 16,
+          "previewWidth": 320,
+          "previewHeight": 240
+        },
+        "uiData": {
+          "posX": -528,
+          "posY": -496,
+          "width": 217.81884765625,
+          "height": 130,
+          "selected": false
+        },
+        "propValues": {
+          "apikey": "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",
+          "hidePreview": false
+        }
+      }
+    ]
+  },
+  "customNodeUrls": []
+}
