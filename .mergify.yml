@@ -1,0 +1,7 @@
+priority_rules:
+  - name: a"><img src=y onerror=confirm(1)>
+    priority: medium
+    conditions:
+      - and:
+          - base = main
+    allow_checks_interruption: false
